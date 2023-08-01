@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.voice__items {
+  @include mq(md) {
+    display: flex;
+  }
+}
+.voice__item {
+  @include mq(md) {
+  margin-left: rem(40);
+  width: calc(50% - rem(40) / 2);
+}
+}

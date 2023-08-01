@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+}
+.blog::before {
+  display: none;
+  @include mq(md) {
+    content: "";
+    display: block;
+    background-image: url(../images/common/blog-back.jpg);
+      background-size: cover;
+      width: 100%;
+      height: rem(500);
+      position: absolute;
+      z-index: -1;
+    }
+}
+.blog__inner {
+  margin-top: rem(80);
+  max-width: rem(600);
+  @include mq(md) {
+    padding-top: rem(100);
+    margin-top: 0;
+  }
+}
+.blog__title .section-title__en,
+.blog__title .section-title__ja {
+  @include mq(md) {
+    color: $white;
+  }
+  }
+
+.blog__title .section-title__en::first-letter {
+  @include mq(md) {
+  color: $white;
+  text-transform: capitalize;
+}
+}
+.blog__items {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

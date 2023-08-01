@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.plan {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: $normal;
+  color: $greenaccent;
+  line-height: 1;
+  border: 1px solid $greenaccent;
+  padding: rem(8) rem(12);
+  @include mq(md) {
+    padding: rem(10) rem(16);
+  }
+}

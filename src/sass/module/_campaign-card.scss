@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.campaign-card {
+box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
+@include mq(md){
+}
+}
+.campaign-card__img {
+  position: relative;
+}
+.campaign-card__img::before {
+  content: "";
+  display: block;
+  padding-top: calc(188 / 280 * 100%);
+  @include mq(md) {
+    padding-top: calc(223 / 334 * 100%);
+  }
+}
+.campaign-card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.campaign-card__body {
+  font-family: $noto-font-family;
+  padding: rem(16) rem(16) rem(24);
+  @include mq(md) {
+  padding: rem(24) rem(16) rem(40);
+}
+}
+.campaign-card__plan {
+}
+.campaign-card_title {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+  color: $green;
+  margin-top: rem(4);
+  border-bottom: rem(1) solid $greenaccent;
+  padding-bottom: rem(8);
+}
+.campaign__text {
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+  }
+}
+.campaign-card__price {
+  display: flex;
+  justify-content: center;
+  font-family: $lato-font-family;
+}
+.campaign-card__original {
+  font-size: rem(20);
+  font-weight: $bold;
+  color: $green;
+  line-height: 1;
+  text-decoration-line: line-through;
+  text-decoration-style:solid;
+  text-decoration-color: #C94800;
+  text-decoration-thickness: rem(3);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+.campaign-card__discount {
+  font-size: rem(32);
+  font-weight: $bold;
+  color: $greenaccent;
+  line-height: 1;
+  text-decoration-thickness: rem(3);
+  margin-left: rem(16);
+  @include mq(md) {
+    font-size: rem(40);
+    margin-left: rem(24);
+}
+}

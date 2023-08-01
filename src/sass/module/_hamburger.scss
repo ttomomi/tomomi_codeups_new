@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.hamburger{
+  z-index:9999;
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.hamburger span {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: rem(32);
+  background: $white;
+  transition: ease .5s;
+  border-radius: rem(5);
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: rem(12) 0;
+ }
+ 
+ .hamburger span:nth-child(3) {
+  top: 0;
+ }
+ /*is-OPEN時の動き*/
+ .hamburger.is-open span:nth-child(1) {
+  top: rem(14);
+  transform: rotate(45deg);
+ }
+ 
+ .hamburger.is-open span:nth-child(2) {
+  transform: translateY(-50%);
+  opacity: 0;
+ }
+ 
+ .hamburger.is-open span:nth-child(3) {
+  top: rem(-12);
+  transform: rotate(-45deg);
+ }
