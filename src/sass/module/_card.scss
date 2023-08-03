@@ -7,7 +7,7 @@
   background-color: $white;
 }
 .card__body {
-  margin-top: rem(24);
+  margin-top: rem(16);
 }
 .card__title,
 .card__text{
@@ -24,15 +24,16 @@
   font-size: rem(16);
   font-weight: $medium;
   line-height: calc(24 / 16);
-  border-bottom: 1px solid $greenaccent;
-  padding-bottom: rem(4);
+  margin-top: rem(2);
 }
 .card__text{
   font-size: rem(16);
   font-weight: $normal;
   line-height: calc(24 / 16);
   color: $green;
-  margin-top: rem(16);
+  margin-top: rem(3);
+  border-top: 1px solid $greenaccent;
+  padding-top: rem(16);
 }
 .card__img {
   position: relative;
@@ -51,4 +52,28 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+// カードホバー
+.card {
+  position: relative;
+}
+.card::before {
+  background: rgba(234, 250, 246, 0.502);
+  bottom: 0;
+  content: '';
+  height: auto;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity .6s ease;
+  width: 100%;
+  z-index: 2;
+}
+.card:hover::before {
+  opacity: 1;
+  overflow: visible;
 }

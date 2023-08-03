@@ -1,13 +1,43 @@
 @use "global" as *;
 
+.voice {
+  position: relative;
+}
+.voice__inner {
+  position: relative;
+  max-width: rem(540);
+}
 .voice__items {
+  margin-top: rem(47);
   @include mq(md) {
-    display: flex;
+    margin-top: rem(33);
   }
 }
-.voice__item {
+
+.voice__btn {
+  margin-top: rem(40);
   @include mq(md) {
-  margin-left: rem(40);
-  width: calc(50% - rem(40) / 2);
+    margin-top: rem(80);
+  }
 }
+
+// 背景あしらい
+.voice__bg-image1 {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    width: rem(301);
+    top: rem(-120);
+    left: max(rem(15), calc(50% - rem(620)));
+  }
+}
+.voice__bg-image2 {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(71);
+    margin-top: rem(-90);
+    margin-left: auto;
+  }
 }

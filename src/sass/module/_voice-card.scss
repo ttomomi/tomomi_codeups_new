@@ -4,21 +4,29 @@
   font-family: $noto-font-family;
   box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   padding: rem(15) rem(16) rem(24);
+  @include mq(md) {
+    padding: rem(24);
+  }
 }
 .voice-card__wrapper {
   display: flex;
+  align-items: end;
 }
 .voice-card__meta {
+  display: flex;
+  flex-direction: column;
   @include mq(md) {
-    display: flex;
+    flex-direction: initial;
     align-items: end;
+    justify-content: space-between;
   }
 }
+
 .voice-card__head {
   border-bottom: 1px solid $greenaccent;
   width: calc(149 / 313 * 100%);
   @include mq(md) {
-    width: calc(276 / 472 * 100%);
+    width: calc(276 / 472 * 100% );
     margin-top: rem(24);
   }
 }
@@ -33,7 +41,6 @@
 }
 .voice-card__plan {
   @include mq(md) {
-    margin-left: rem(102);
     flex-shrink: 0;
   }
 }
@@ -44,16 +51,33 @@
   margin-top: rem(4);
   @include mq(md) {
     font-size: rem(24);
+    margin-top: rem(8);
   }
 }
-.voice-card__img {
-  margin-left: rem(13);
+.voice-card__curtain {
   position: relative;
+  overflow: hidden;
   width: calc(151 / 313 * 100%);
+  margin-left: rem(13);
   @include mq (md) {
-    margin-left: rem(16);
     width: calc(180 / 472 * 100%);
+    margin-left: rem(17);
   }
+}
+.voice-card__slide {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  z-index: 3;
+  background-color: $greenaccent;
+}
+.voice-card__img {
+  position: relative;
+  width: 100%;
+  
 }
 .voice-card__img::before {
   content: "";

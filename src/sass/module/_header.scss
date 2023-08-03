@@ -18,6 +18,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 rem(15);
+  @include mq(md) {
+    padding: 0 rem(40);
+  }
 }
 
 .header__logo {
@@ -35,4 +38,7 @@
   align-items: center;
 }
 
-
+// SP画面開いた時に色変わる
+.js-header-inner.is-open {
+  background-color: $greenaccent;
+}

@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.price-list__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $green;
+  line-height: calc(24 / 16);
+  padding-bottom: rem(4);
+}
+.price-list__items {
+  border-top: 1px solid $greenaccent;
+  margin-top: rem(4);
+}
+.price-list__items + .price-list__items {
+  margin-top: rem(40);
+}
+.price-list__item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(10);
+  @include mq(md) {
+    padding-top: rem(8);
+  }
+}
+.price-list__item dt {
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $green;
+  line-height: calc(24 / 16);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+.price-list__item dd {
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $green;
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}

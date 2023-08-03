@@ -17,14 +17,17 @@
   color: $greenaccent;
   text-transform: capitalize;
 }
-.section-title__ja {
+.section-title__jp {
   font-family: $noto-font-family;
   font-size: rem(12);
   font-weight: $normal;
   color: $greenaccent;
   line-height: 1;
-  margin-top: rem(4);
-  @include mq(md) {
-    margin-top: rem(8);
-  }
+  margin-top: rem(11);
+  
+}
+
+// コンタクト　余白
+.section-title__jp--contact {
+  margin-top: rem(-4);
 }

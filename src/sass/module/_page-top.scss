@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.page-top {
+  display: none;
+  position: fixed;
+  right: rem(15);
+  bottom: rem(16);
+  z-index: 9999;
+}
+.page-top__circle {
+  border: 1px solid $greenaccent;
+  width: rem(48);
+  height: rem(48);
+  border-radius: 50%;
+  display: block;
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+.page-top__yazirusi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: rem(28);
+  @include mq(md) {
+    width: rem(40);
+  }
+}
+.page-top__line01 {
+  height: 1px;
+  background-color: $greenaccent;
+}
+.page-top__line02 {
+  position: absolute;
+  top: 0;
+  transform-origin: left top;
+  width: rem(13);
+  height: 1px;
+  background-color: $greenaccent;
+  transform: rotate(45deg);
+
+}
+body {
+  position: relative;
+}

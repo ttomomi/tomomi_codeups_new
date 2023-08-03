@@ -1,0 +1,121 @@
+@use "global" as *;
+
+.contact {
+  position: relative;
+}
+.contact__bg-image {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    top: rem(-51);
+    right: max(rem(15), calc(50% - rem(670)));
+    width: clamp(rem(250), calc(301 / 1440 * 100vw), rem(301));
+  }
+}
+.contact__inner {
+  max-width: rem(540);
+}
+.contact__contents {
+  @include mq(md) {
+    display: flex;
+    box-shadow: rem(4) rem(4) rem(10) rgb(0, 0, 0, 0.25);
+    padding-top: rem(66);
+    padding-bottom: rem(80);
+  }
+}
+.contact__content {
+  @include mq(md) {
+    margin-left: rem(50);
+    width: calc(440 / 1080 * 100%);
+  }
+}
+.contact__logo {
+  width: rem(174);
+  margin: auto;
+  @include mq(md) {
+    width: rem(200);
+  }
+}
+.contact__info {
+  border-top: 1px solid $greenaccent;
+  text-align: center;
+  padding-top: rem(16);
+  margin-top: rem(6);
+  @include mq(md) {
+    display: flex;
+    padding-top: rem(25);
+  }
+}
+.contact__detail {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $green;
+  line-height: calc(24 / 16);
+  @include mq(md) {
+    width: calc(146 / 440 * 100%);
+    flex-shrink: 0;
+    margin-top: 0;
+    text-align: initial;
+  }
+}
+.contact__tel {
+  display: block;
+}
+.contact__tel,
+.contact__time,
+.contact__holiday {
+  margin-top: rem(4);
+}
+
+.contact__map {
+  margin-top: rem(16);
+  @include mq(md) {
+    width: calc(273 / 440 * 100%);
+    margin-top: 0;
+    margin-left: rem(21);
+  }
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9; //アスペクト比（縦横比）を指定
+}
+
+.contact__wrapper {
+  margin-top: rem(30);
+  @include mq(md) {
+    width: calc(315 / 1080 * 100%);
+    position: relative;
+    margin-top: rem(20);
+    margin-left: rem(163);
+  }
+}
+.contact__title .section-title__en {
+  font-size: rem(80);
+}
+.contact__link {
+  display: block;
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $greenaccent;
+  line-height: calc(18 / 14);
+  text-align: center;
+  margin-top: rem(10);
+}
+.contact__btn {
+  margin-top: rem(40);
+}
+
+.contact__wrapper::before {
+  @include mq(md) {
+  position: absolute; /*--positionを追加--*/
+	top: rem(-18);
+	right: 100%;
+	margin: 0 rem(80);
+	content: "";
+	width: 1px; /*--縦線の太さ(幅)--*/
+	height: 100%;
+	background-color: $greenaccent; /*--縦線の色--*/
+}
+}

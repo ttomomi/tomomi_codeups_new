@@ -29,7 +29,7 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   font-family: $noto-font-family;
   padding: rem(16) rem(16) rem(24);
   @include mq(md) {
-  padding: rem(24) rem(16) rem(40);
+  padding: rem(25) rem(16) rem(40);
 }
 }
 .campaign-card__plan {
@@ -43,7 +43,13 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: rem(8);
 }
-.campaign__text {
+.campaign-card__wrapper {
+  margin-top: rem(8);
+  @include mq(md) {
+    margin-top: rem(16);
+  }
+}
+.campaign-card__text {
   font-size: rem(14);
   font-weight: $normal;
   line-height: calc(24 / 14);
@@ -57,6 +63,8 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   display: flex;
   justify-content: center;
   font-family: $lato-font-family;
+  align-items: baseline;
+  margin-top: rem(8);
 }
 .campaign-card__original {
   font-size: rem(20);
@@ -77,7 +85,7 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   color: $greenaccent;
   line-height: 1;
   text-decoration-thickness: rem(3);
-  margin-left: rem(16);
+  margin-left: rem(18);
   @include mq(md) {
     font-size: rem(40);
     margin-left: rem(24);

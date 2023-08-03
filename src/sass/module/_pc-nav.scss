@@ -17,8 +17,11 @@
   display: inline-block;
   position: relative;
 }
+.pc-nav__item a {
+  padding-left: rem(20);
+}
 .pc-nav__item:not(:last-child) a {
-  padding: 0 rem(20);
+  padding-right: rem(20);
 }
 .pc-nav__en {
   font-family: $gotu-font-family;
@@ -26,11 +29,15 @@
   font-weight: $normal;
   line-height: 1;
 }
+.pc-nav__en::first-letter {
+  text-transform: capitalize;
+}
 .pc-nav__ja {
   font-size: rem(10);
   font-weight: $normal;
   line-height: 1;
   margin-top: rem(4);
+  white-space: nowrap;
 }
 
 // ホバーアニメーション
