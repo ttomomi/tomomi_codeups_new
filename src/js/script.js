@@ -65,10 +65,10 @@ $(window).on("scroll", function () {
 const swiper01 = new Swiper(".js-fv-swiper", {
   loop: true,
   effect: "fade", 
-  // autoplay: {
-  //   delay: 4000, 
-  //   disableOnInteraction: false, 
-  // },
+  autoplay: {
+    delay: 4000, 
+    disableOnInteraction: false, 
+  },
   speed: 2000, 
   pagination: {
     el: ".swiper-pagination",
