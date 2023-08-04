@@ -65,10 +65,10 @@ $(window).on("scroll", function () {
 const swiper01 = new Swiper(".js-fv-swiper", {
   loop: true,
   effect: "fade", 
-  autoplay: {
-    delay: 4000, 
-    disableOnInteraction: false, 
-  },
+  // autoplay: {
+  //   delay: 4000, 
+  //   disableOnInteraction: false, 
+  // },
   speed: 2000, 
   pagination: {
     el: ".swiper-pagination",
@@ -86,14 +86,20 @@ const mySwiper02 = new Swiper('.js-campaign-swiper ', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.js-campaign-card .swiper-button-next',
-    prevEl: '.js-campaign-card .swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   breakpoints: {
     768: {
       spaceBetween: 40,
-      slidesPerView: '3',
-    }
+      slidesPerView: '3.5',
+      width: 1265.5,
+    },
+    1920: {
+      slidesPerView: "5",
+      spaceBetween: 40,
+      width: 1825,
+    },
   },
 });
 
@@ -137,19 +143,6 @@ gsap.to(".js-voice-card-slide", {
   
 })
 
-
-
-// // gsap.to(".js-voice-card-slide", {
-//   width: "150%",
-//   left: "150%",
-//   duration: 1.5,
-//   scrollTrigger: {
-//     trigger: '.blog',
-//     start:'bottom-=100 ',
-//     // markers: true,
-//   },
-  
-// })
 
 // カーテン price
 gsap.to(".js-price-slide", {

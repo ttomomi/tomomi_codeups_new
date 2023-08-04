@@ -40,9 +40,6 @@
   background-size: auto rem(18);
   padding-left: rem(22);
 }
-.sp-nav__sub-items {
-  margin-top: rem(9);
-}
 .sp-nav__item a {
   display: block;
   width: 100%;
@@ -50,6 +47,13 @@
   font-weight: $bold;
   color: $white;
 }
+.sp-nav__sub-items {
+  margin-top: rem(9);
+}
+.sp-nav__items + .sp-nav__items {
+  margin-left: rem(5);
+}
+
 .sp-nav__sub-item a {
   display: block;
   width: 100%;

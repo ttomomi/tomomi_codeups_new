@@ -7,12 +7,9 @@
   color: $greenaccent;
   line-height: 1;
   border: 1px solid $greenaccent;
-  padding: rem(8) rem(5);
-  width: rem(108);
-  white-space: nowrap;
+  padding: rem(8) rem(11);
   text-align: center;
   @include mq(md) {
-    padding: rem(10) rem(5);
-    width: rem(116);
+    padding: rem(10) rem(15);
   }
 }

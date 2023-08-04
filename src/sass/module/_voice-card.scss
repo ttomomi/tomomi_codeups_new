@@ -13,9 +13,8 @@
   align-items: end;
 }
 .voice-card__meta {
-  display: flex;
-  flex-direction: column;
   @include mq(md) {
+    display: flex;
     flex-direction: initial;
     align-items: end;
     justify-content: space-between;
@@ -35,6 +34,7 @@
   font-weight: $normal;
   line-height: calc(18 / 12);
   color: $green;
+  display: block;
   @include mq(md) {
     flex-shrink: 0;
   }

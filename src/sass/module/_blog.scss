@@ -29,8 +29,9 @@
 }
 .blog__inner {
   max-width: rem(540);
+}
+.blog__inner.inner {
   padding: 0 rem(21);
-  
 }
 .blog__title .section-title__en,
 .blog__title .section-title__jp {

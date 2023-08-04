@@ -56,8 +56,8 @@
 .about__contents {
   margin-top: rem(58);
   @include mq(md) {
-    position: absolute;
-    margin-top: rem(80);
+    margin-top: rem(-527);
+    margin-left: auto;
     top: 0;
     right: 0;
     display: flex;
@@ -115,6 +115,6 @@
     display: block;
     width: rem(194);
     right: max(rem(15),calc(50% - rem(637)));
-    bottom: rem(-146);
+    bottom: rem(-91);
   }
 }

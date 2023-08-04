@@ -15,7 +15,9 @@
   margin-top: rem(31);
   @include mq(md) {
     margin-top: rem(42);
-    max-width: initial;
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+    padding-bottom: rem(10);
   }
 }
 .campaign__items {
@@ -25,7 +27,7 @@
 .campaign__btn {
   margin-top: rem(40);
   @include mq(md){    
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }
 

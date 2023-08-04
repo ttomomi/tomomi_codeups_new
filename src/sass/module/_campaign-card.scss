@@ -41,8 +41,12 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   color: $green;
   margin-top: rem(4);
   border-bottom: rem(1) solid $greenaccent;
-  padding-bottom: rem(8);
+  padding-bottom: rem(8); 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .campaign-card__wrapper {
   margin-top: rem(8);
   @include mq(md) {

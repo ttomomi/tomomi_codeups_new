@@ -11,14 +11,14 @@
 }
 .pc-nav__item {
   text-align: center;
+  white-space: nowrap;
 }
 .pc-nav__item a {
   color: $white;
   display: inline-block;
   position: relative;
-}
-.pc-nav__item a {
   padding-left: rem(20);
+  
 }
 .pc-nav__item:not(:last-child) a {
   padding-right: rem(20);
