@@ -132,3 +132,8 @@
     margin-top: rem(80);
   }
 }
+
+// ホバーアクション
+.footer__item a:hover {
+  opacity: 0.7;
+}

@@ -18,3 +18,8 @@
     margin-left: rem(40);
 }
 }
+.voice-list__item:nth-child(n+3) {
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

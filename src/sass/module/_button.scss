@@ -56,8 +56,10 @@
   background-color: $white;
   transform: rotate(45deg);
 }
+
 // ホバーアニメーション
 .button::before {
+  @include mq(md) {
   content: '';
   position: absolute;
   top: 0;
@@ -69,17 +71,23 @@
   transform: scale(0, 1);
   transform-origin: left top;
   transition: 0.3s ease-in-out;
+  }
 }
 
 .button:hover {
+  @include mq(md) {
   color: $greenaccent;
+  }
 }
-
 .button:hover::before {
+  @include mq(md) {
   transform: scale(1, 1);
   width: 100%;
+  }
 }
 .button:hover .button__line1,
 .button:hover .button__line2 {
+  @include mq(md) {
   background-color: $greenaccent;
+  }
 }

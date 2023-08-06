@@ -2,8 +2,11 @@
 
 .card {
   display: block;
-  padding: rem(16) rem(16) rem(24) rem(16);
   box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
+}
+.card a {
+  display: block;
+  padding: rem(16) rem(16) rem(24) rem(16);
   background-color: $white;
 }
 .card__body {
@@ -56,10 +59,10 @@
 }
 
 // カードホバー
-.card {
+.card a{
   position: relative;
 }
-.card::before {
+.card a::before {
   background: rgba(234, 250, 246, 0.502);
   bottom: 0;
   content: '';
@@ -74,7 +77,7 @@
   width: 100%;
   z-index: 2;
 }
-.card:hover::before {
+.card a:hover::before {
   opacity: 1;
   overflow: visible;
 }
