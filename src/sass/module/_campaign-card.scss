@@ -2,6 +2,7 @@
 
 .campaign-card {
 box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
+height: 100%;
 @include mq(md){
 }
 }
@@ -40,9 +41,6 @@ box-shadow: rem(2) rem(2) rem(10) rgb(0, 0 , 0, 0.25);
   margin-top: rem(4);
   border-bottom: rem(1) solid $greenaccent;
   padding-bottom: rem(8); 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .campaign-card__wrapper {
