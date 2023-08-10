@@ -2,15 +2,15 @@
 
 .footer {
   background-color: $greenaccent;
-}
-.footer__inner {
   padding-top: rem(48);
   padding-bottom: rem(56);
-  max-width: rem(600);
   @include mq(md) {
     padding-top: rem(80);
     padding-bottom: rem(80);
   }
+}
+.footer__inner {
+  max-width: rem(600);
 }
 .footer__wrapper {
   @include mq(md) {

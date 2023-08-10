@@ -25,10 +25,14 @@
 }
 .campaign__items {
   display: flex;
-  
+}
+.swiper-wrapper {
+  position: relative;
+  margin-right: calc(50% - 50vw);
 }
 .campaign__btn {
   margin-top: rem(40);
+  text-align: center;
   @include mq(md){    
     margin-top: rem(70);
   }

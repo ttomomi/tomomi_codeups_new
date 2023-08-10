@@ -4,13 +4,11 @@ jQuery(function ($) {
 $('.js-hamburger').on('click', function () {
   if ($('.js-hamburger').hasClass('is-open')) {
     $('.js-drawer-menu').removeClass('is-open');
-    $('.js-header-inner').removeClass('is-open');
     $(this).removeClass('is-open');
     $('body').css('overflow-y','auto'); 
   } else {
     $('.js-drawer-menu').addClass('is-open');
     $(this).addClass('is-open');
-    $('.js-header-inner').addClass('is-open');
     $('body').css('overflow-y', 'hidden');
   }
 });
@@ -78,16 +76,16 @@ const swiper01 = new Swiper(".js-fv-swiper", {
 
 // キャンペーンカードスライダー
 const mySwiper02 = new Swiper('.js-campaign-swiper ', {
+  loop: true,
+  loopSlide: 8,
+  speed: 2000,
   slidesPerView: '1.22',
   spaceBetween: 24,
   grabCursor: true,
-  pagination: {
-    el: '.js-campaign-card .swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  width: 280,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
   },
   breakpoints: {
     768: {
@@ -101,6 +99,15 @@ const mySwiper02 = new Swiper('.js-campaign-swiper ', {
       width: 1825,
     },
   },
+  pagination: {
+    el: '.js-campaign-card .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
 });
 
 // カーテン information

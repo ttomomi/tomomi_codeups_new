@@ -14,10 +14,9 @@
   height: rem(54);
   background-color: $greenaccent;
   border: 1px solid $greenaccent;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
 }
 .button::first-letter {
   text-transform: capitalize;

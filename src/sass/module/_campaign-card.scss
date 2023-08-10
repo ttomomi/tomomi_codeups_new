@@ -39,13 +39,14 @@ height: 100%;
   line-height: calc(24 / 16);
   color: $green;
   margin-top: rem(4);
-  border-bottom: rem(1) solid $greenaccent;
-  padding-bottom: rem(8); 
 }
 
 .campaign-card__wrapper {
+  border-top: rem(1) solid $greenaccent;
+  padding-top: rem(8);
   margin-top: rem(8);
   @include mq(md) {
+    padding-top: rem(8);
     margin-top: rem(16);
   }
 }

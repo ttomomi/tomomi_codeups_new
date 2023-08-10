@@ -16,13 +16,16 @@
 .about__img {
   display: flex;
   position: relative;
+  @include mq(md){
+    width: calc(399 / 1080 * 100%);
+  }
 }
 .about__left {
   width: calc(128 / 345 * 100%);
   z-index: 1;
   position: relative;
   @include mq(md) {
-  width: calc(399 / 1080 * 100%);
+  width: 100%;
   }
 }
 .about__left::before {
@@ -102,6 +105,7 @@
 }
 .about__btn {
   margin-top: rem(16);
+  text-align: center;
   @include mq(md) {
   margin-top: rem(40);
 }

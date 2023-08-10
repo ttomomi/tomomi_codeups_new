@@ -24,10 +24,8 @@
   display: inline-block;
   position: relative;
   padding-left: rem(20);
-  height: inherit;
-}
-.pc-nav__item:not(:last-child) a {
   padding-right: rem(20);
+  height: inherit;
 }
 .pc-nav__link {
   display: flex;
